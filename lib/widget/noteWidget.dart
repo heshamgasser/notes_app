@@ -24,33 +24,28 @@ class NoteWidget extends StatelessWidget {
             width: double.infinity,
             height: MediaQuery.of(context).size.height / 4,
           ),
-          Positioned(
-            top: 40,
-            left: 30,
-            child: Text(
+
+          ListTile(
+            contentPadding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+            title: Text(
               'Flutter Tips',
               style: Theme.of(context).textTheme.titleLarge,
             ),
-          ),
-          Positioned(
-            top: 110,
-            left: 30,
-            child: Text(
+            subtitle: Text(
               'Build Your Carrer with Hesham Gasser',
               style: Theme.of(context).textTheme.bodyMedium,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
-          ),
-          Positioned(
-            right: 30,
-            top: 50,
-            child: IconButton(
+            trailing: IconButton(
               onPressed: () {},
               icon: Icon(Icons.delete,
-                  ),
+              ),
             ),
+            isThreeLine: true,
           ),
+
+
           Positioned(
             bottom: 40,
             right: 30,
@@ -61,6 +56,9 @@ class NoteWidget extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
           ),
+
+
+
         ],
       ),
     );

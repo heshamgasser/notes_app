@@ -3,12 +3,21 @@ import 'package:flutter/material.dart';
 class TextFieldWidget extends StatelessWidget {
   String hint;
   int maxLines;
+  void Function(String?)? onSaved;
 
-  TextFieldWidget ({required this.hint, this.maxLines = 1});
+  TextFieldWidget ({required this.hint, this.maxLines = 1, this.onSaved});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onSaved: (newValue) {
+        onSaved;
+      },
+      validator: (value) {
+        if (value?.isEmpty ?? true){
+          return 'Field is required';
+        }
+      },
       style: Theme.of(context).textTheme.bodyMedium,
       maxLines: maxLines,
       decoration: InputDecoration(
@@ -26,6 +35,10 @@ class TextFieldWidget extends StatelessWidget {
         focusedBorder:  OutlineInputBorder(
           borderRadius: BorderRadius.circular(20),
           borderSide: BorderSide(color: Theme.of(context).primaryColor),
+        ),
+        errorBorder:  OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20),
+          borderSide: BorderSide(color: Colors.red),
         ),
       ),
     );
