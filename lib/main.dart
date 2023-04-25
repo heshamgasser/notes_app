@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:noteapplication/screens/editNoteScreen.dart';
 import 'package:noteapplication/screens/notesScreen.dart';
 import 'package:noteapplication/themeData/myThemeData.dart';
 
-void main (){
+
+void main () async {
+  await Hive.initFlutter();
+
+  await Hive.openBox('note_box');
+  
   runApp(NotesApp());
 }
 
