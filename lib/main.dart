@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noteapplication/screens/editNoteScreen.dart';
 import 'package:noteapplication/screens/notesScreen.dart';
 import 'package:noteapplication/themeData/myThemeData.dart';
 
@@ -18,6 +19,7 @@ class NotesApp extends StatelessWidget {
       initialRoute: NotesScreen.routeName,
       routes: {
         NotesScreen.routeName:(context) => NotesScreen(),
+        NoteEditScreen.routeName:(context) => NoteEditScreen(),
 
       },
 

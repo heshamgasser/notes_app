@@ -8,33 +8,34 @@ class AddNoteWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Spacer(),
-          TextFieldWidget(
-            hint: 'Title',
-            verticalPadding: 20,
-          ),
-          Spacer(flex: 2),
-          TextFieldWidget(hint: 'Content', verticalPadding: 80, maxLines: 5),
-          Spacer(flex: 6),
-          ElevatedButton(
-            style: ButtonStyle(
-              shape: MaterialStatePropertyAll(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+           
+            TextFieldWidget(
+              hint: 'Title',
+            ),
+            SizedBox(height: 10),
+            TextFieldWidget(hint: 'Content', maxLines: 5),
+            SizedBox(height: 30),
+            ElevatedButton(
+              style: ButtonStyle(
+                shape: MaterialStatePropertyAll(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                 ),
               ),
+              onPressed: () {},
+              child: Text(
+                'Add',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
             ),
-            onPressed: () {},
-            child: Text(
-              'Add',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-          ),
-          Spacer(),
-        ],
+          SizedBox(height: 10),
+          ],
+        ),
       ),
     );
   }

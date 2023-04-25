@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 
 class TextFieldWidget extends StatelessWidget {
   String hint;
-  double horizontalPadding , verticalPadding;
   int maxLines;
 
-  TextFieldWidget ({required this.hint, this.horizontalPadding = 20 , required this.verticalPadding, this.maxLines = 1});
+  TextFieldWidget ({required this.hint, this.maxLines = 1});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +12,7 @@ class TextFieldWidget extends StatelessWidget {
       style: Theme.of(context).textTheme.bodyMedium,
       maxLines: maxLines,
       decoration: InputDecoration(
-        contentPadding: EdgeInsets.symmetric(horizontal: horizontalPadding , vertical: verticalPadding),
+        contentPadding: EdgeInsets.symmetric(horizontal: 20 , vertical: 20),
         hintText: hint,
         hintStyle: Theme.of(context).textTheme.bodySmall,
         border: OutlineInputBorder(
