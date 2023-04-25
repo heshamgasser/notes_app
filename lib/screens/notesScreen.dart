@@ -24,7 +24,10 @@ class NotesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: AppBar(
+      appBar:
+
+
+      AppBar(
         title: Text('Notes'),
         actions: [
           Container(
