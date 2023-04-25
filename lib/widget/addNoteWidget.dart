@@ -14,10 +14,9 @@ class AddNoteWidget extends StatelessWidget {
           Spacer(),
           TextFieldWidget(
             hint: 'Title',
-            verticalPadding: 20,
           ),
           Spacer(flex: 2),
-          TextFieldWidget(hint: 'Content', verticalPadding: 80, maxLines: 5),
+          TextFieldWidget(hint: 'Content', maxLines: 5),
           Spacer(flex: 6),
           ElevatedButton(
             style: ButtonStyle(
