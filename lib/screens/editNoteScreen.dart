@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noteapplication/screens/notesScreen.dart';
 import 'package:noteapplication/widget/textFieldWidget.dart';
 
 class NoteEditScreen extends StatelessWidget {
@@ -18,7 +19,9 @@ class NoteEditScreen extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10), color: Colors.black12),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, NotesScreen.routeName);
+              },
               icon: Icon(Icons.done),
             ),
           ),
