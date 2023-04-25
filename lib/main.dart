@@ -18,6 +18,7 @@ class NotesApp extends StatelessWidget {
       initialRoute: NotesScreen.routeName,
       routes: {
         NotesScreen.routeName:(context) => NotesScreen(),
+        NoteEdit
 
       },
 
