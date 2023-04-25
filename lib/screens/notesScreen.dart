@@ -52,6 +52,7 @@ class NotesScreen extends StatelessWidget {
         width: MediaQuery.of(context).size.width / 5,
         height: MediaQuery.of(context).size.height / 5,
         child: FloatingActionButton(
+          shape: CircleBorder(),
           onPressed: () {
             showModalBottomSheet(
               context: context,
